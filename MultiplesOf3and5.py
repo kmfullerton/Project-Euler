@@ -11,9 +11,20 @@ def sum_of_multiples(list_of_multiples, max_val):
 
 def main():
     list_of_multiples = [3, 5]
-    max_val = 999
+    max_val = 9
+    sum = 0
 
-    sum = sum_of_multiples(list_of_multiples, max_val)
+
+    for mult in list_of_multiples:
+        print('multiplier:', mult)
+        i = 1
+        prod = mult * i
+        while prod < max_val:
+            prod = mult * i
+            sum += prod
+            print('The sum is:', sum)
+            i = i+1
+
     print('The sum of multiples is:', sum)
 
 main()
